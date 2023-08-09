@@ -5,7 +5,7 @@ int Kadanes(int Array[], int Size){
     int MaxSum = Array[0];
     int CurrentSum = Array[0];
     for(int CurrentIndex = 1; CurrentIndex<Size; CurrentIndex++){
-        CurrentSum = max(CurrentSum, CurrentSum + Array[CurrentIndex]);
+        CurrentSum = max(Array[CurrentIndex], CurrentSum + Array[CurrentIndex]);
         MaxSum = max(MaxSum, CurrentSum);
     }
     return MaxSum;
